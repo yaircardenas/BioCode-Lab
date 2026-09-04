@@ -2890,12 +2890,16 @@ function bossSpec(m){let v=bossVariant(m.id);let b={title:m.boss.title,desc:m.bo
 function bossHTML(m,ready){let spec=bossSpec(m);if(!S.boss[m.id])S.boss[m.id]={code:starterOf(spec),out:"",attempts:0,done:false,error:false};let s=S.boss[m.id];if(!s.done&&s.attempts===0&&(!s.code||s.code.startsWith("# BOSS")||s.code.includes("Define analyze")||s.code.includes("Build your final")))s.code=starterOf(spec);if(!ready)return `<div class="boss" id="boss_${m.id}"><div class="num">${tr("boss")}</div><h3>🔒 ${tr("bossLocked")}</h3></div>`;return `<div class="boss ${s.error&&!s.done?"error":""}" id="boss_${m.id}"><div class="num">${tr("boss")} · +${spec.xp} XP</div><div class="personal">${tr("personalized")} · ${tr("variant")} ${spec.variant}</div><h3>⚠ ${esc(spec.title[idxLang()])}</h3><p>${formatLearningText(spec.desc[idxLang()])}</p><pre>${esc(spec.seq)}</pre><div class="grid2"><div><div class="label">${tr("editor")}</div><textarea class="editor" id="bossCode" aria-label="${esc(tr("editor"))}" ${CODE_INPUT_ATTRS}>${esc(s.code)}</textarea><div class="row"><button class="btn gold" id="bossCheck">${s.done?tr("complete"):tr("checkNext")}</button></div></div><div><div class="label">${tr("output")}</div><div class="output" id="bossOut">${esc(s.out)}</div><div class="feedback ${s.error&&!s.done?"bad":""}" id="bossFb">${s.error&&!s.done?tr("wrong"):""}</div></div></div>${S.done.includes(m.id)?`<div class="challengeFooter"><button class="btn primary nextBtn" id="nextMissionBtn">${tr("nextMission")}</button></div>`:""}</div>`}
 function formatLearningText(text){
  let src=String(text??""),slots=[];
+ const decodeEntities=value=>String(value).replace(/&(amp|lt|gt|quot|#039);/g,(_,name)=>({"amp":"&","lt":"<","gt":">","quot":'"',"#039":"'"}[name]));
  const hold=(value,block=false)=>{
   const i=slots.length;
-  slots.push({value:String(value),block});
+  slots.push({value:decodeEntities(value),block});
   return "\uE000"+i+"\uE001";
  };
  const protect=(rx)=>{src=src.replace(rx,m=>hold(m,false))};
+
+ /* Authored inline code is allowed in lesson text; its contents stay escaped. */
+ src=src.replace(/<code>([\s\S]*?)<\/code>/gi,(_,m)=>hold(m,false));
 
  /* Explicit backticks can force code styling in future authored text. */
  src=src.replace(/`([^`\n]+)`/g,(_,m)=>hold(m,false));
@@ -2925,6 +2929,7 @@ function formatLearningText(text){
  protect(/\bpwd\b/g);
 
  let safe=esc(src).replace(/\n/g,"<br>");
+ safe=safe.replace(/&lt;(\/?)(b|i)&gt;/gi,"<$1$2>");
  safe=safe.replace(/\uE000(\d+)\uE001/g,(_,n)=>{
   const item=slots[Number(n)];
   if(!item)return"";
