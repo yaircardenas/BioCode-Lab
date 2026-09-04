@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BioCode Lab v1.0.4 — Learn Python. Decode Biology.</title>
+<title>BioCode Lab v1.0.5 — Learn Python. Decode Biology.</title>
 <meta name="description" content="Gamified, story-driven Python learning for biology students.">
 <meta name="theme-color" content="#0b2622">
 <meta property="og:type" content="website">
-<meta property="og:title" content="BioCode Lab v1.0.4">
+<meta property="og:title" content="BioCode Lab v1.0.5">
 <meta property="og:description" content="Learn Python, terminal skills and bioinformatics through biological missions.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BioCode Lab v1.0.4">
+<meta name="twitter:title" content="BioCode Lab v1.0.5">
 <meta name="twitter:description" content="Learn Python, terminal skills and bioinformatics through biological missions.">
-<script defer src="https://cloud.umami.is/script.js" data-website-id="41205d7c-3ce6-4a19-a64f-33f1cd7f8530" data-domains="yaircardenas.github.io" data-do-not-track="true" data-auto-pageview="false" data-exclude-hash="true" data-tag="v1.0.4"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="41205d7c-3ce6-4a19-a64f-33f1cd7f8530" data-domains="yaircardenas.github.io" data-do-not-track="true" data-auto-pageview="false" data-exclude-hash="true" data-tag="v1.0.5"></script>
 <style>
 /* =============================================================
    BioCode Lab — sistema de diseño «Cromatograma»
@@ -193,7 +193,7 @@ pre,.editor,.output{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monos
 .share{display:grid;grid-template-columns:1fr .7fr;overflow:hidden}.sharePreview{padding:22px;min-height:350px;background:radial-gradient(circle at 90% 10%,rgba(125,183,244,.2),transparent 29%),radial-gradient(circle at 8% 90%,rgba(88,212,171,.2),transparent 31%),linear-gradient(160deg,#081114,#142830);display:flex;flex-direction:column;justify-content:space-between}.sharePreview h3{font-size:var(--fs-2xl);margin:8px 0}.sharePreview .big{font-size:45px;font-weight:1000}.shareDetails{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.shareDetail{padding:9px;border:1px solid rgba(155,189,225,.22);border-radius:10px;background:rgba(6,13,15,.28);font-size:var(--fs-2xs);line-height:1.55}.shareDetail b{font-size:var(--fs-3xs);color:#97b3ba}.shareActions{padding:18px}.shareActions p{font-size:var(--fs-xs);color:var(--muted);line-height:1.55}
 .modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.76);display:grid;place-items:center;padding:18px}.modalCard{width:min(880px,100%);max-height:90vh;overflow:auto;background:var(--bg-2);border:1px solid var(--line-2);border-radius:19px;padding:18px}.modalHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modalCard h2{margin:0}.modalCard p{color:#b1c5c9;line-height:1.55;font-size:var(--fs-xs)}
 .formGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.formGrid label{font-size:var(--fs-2xs);color:#a5bbc0;font-weight:900}.formGrid input{width:100%;margin-top:5px;padding:10px;background:var(--bg);color:var(--ink);border:1px solid var(--line-2);border-radius:9px}
-.surveyGrid{display:grid;gap:14px;margin-top:14px}.surveyField{padding:12px;border:1px solid var(--line-2);border-radius:10px;background:var(--bg)}.surveyField label,.surveyLabel{display:block;font-size:var(--fs-xs);font-weight:900;color:var(--ink);line-height:1.35}.surveyChoices,.surveyScale{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.surveyChoices label,.surveyScale label{display:flex;align-items:center;gap:6px;padding:7px 9px;border:1px solid var(--line);border-radius:9px;background:var(--bg-2);font-size:var(--fs-xs);font-weight:700;color:#c8d9dd}.surveyField input[type="text"],.surveyField textarea{width:100%;margin-top:8px;padding:10px;background:var(--bg-2);color:var(--ink);border:1px solid var(--line);border-radius:9px}.surveyField textarea{min-height:86px;resize:vertical}.surveyEnds{display:flex;justify-content:space-between;gap:10px;margin-top:7px;color:var(--muted);font-size:var(--fs-3xs)}
+.surveyTopBtn{border-color:rgba(88,212,171,.45);color:#c9f2e7}.surveyGrid{display:grid;gap:14px;margin-top:14px}.surveyField{padding:12px;border:1px solid var(--line-2);border-radius:10px;background:var(--bg)}.surveyField label,.surveyLabel{display:block;font-size:var(--fs-xs);font-weight:900;color:var(--ink);line-height:1.35}.surveyChoices,.surveyScale{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.surveyChoices label,.surveyScale label{display:flex;align-items:center;gap:6px;padding:7px 9px;border:1px solid var(--line);border-radius:9px;background:var(--bg-2);font-size:var(--fs-xs);font-weight:700;color:#c8d9dd}.surveyField input[type="text"],.surveyField textarea{width:100%;margin-top:8px;padding:10px;background:var(--bg-2);color:var(--ink);border:1px solid var(--line);border-radius:9px}.surveyField textarea{min-height:86px;resize:vertical}.surveyEnds{display:flex;justify-content:space-between;gap:10px;margin-top:7px;color:var(--muted);font-size:var(--fs-3xs)}
 .drop{padding:22px;text-align:center;border:2px dashed var(--line-2);border-radius:13px;background:var(--bg);color:#b0c4c8}.drop.drag{border-color:var(--green);background:var(--bg-2)}
 .teacherStats{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:11px 0}.teacherStat{text-align:center;padding:9px;border:1px solid var(--line-2);border-radius:10px;background:var(--bg)}.teacherStat b{display:block;font-size:var(--fs-l)}.teacherStat span{font-size:var(--fs-3xs);color:var(--muted)}
 .tableWrap{overflow-x:auto;border:1px solid var(--line-2);border-radius:10px}.teacherTable{width:100%;border-collapse:collapse;min-width:620px}.teacherTable th,.teacherTable td{padding:8px;border-bottom:1px solid var(--line);text-align:left;font-size:var(--fs-2xs)}.teacherTable th{background:var(--bg);color:#99b3ba;font-size:var(--fs-2xs)}.teacherTable tr:last-child td{border-bottom:0}
@@ -1542,7 +1542,7 @@ body.viewHome .authorRibbon{ display:none }
    <div class="wAuthorLabel" data-i18n="wMadeBy">Created by</div>
    <div class="wAuthorName">Yair Cárdenas Conejo</div>
    <p class="wAuthorText" data-i18n="wAuthorText">Built as an open educational resource so that biology students can learn to program with the data they actually care about. Free to use, copy and adapt in any classroom.</p>
-   <div class="wBadges"><span class="wChip">v1.0.4</span><span class="wChip">MIT License</span><span class="wChip">Python 3</span><span class="wChip">Biopython</span><span class="wChip" data-i18n="wOpenSource">Open source</span></div>
+   <div class="wBadges"><span class="wChip">v1.0.5</span><span class="wChip">MIT License</span><span class="wChip">Python 3</span><span class="wChip">Biopython</span><span class="wChip" data-i18n="wOpenSource">Open source</span></div>
   </div>
  </div>
 
@@ -1583,10 +1583,10 @@ body.viewHome .authorRibbon{ display:none }
       <div class="authorMain">BioCode Lab by Yair Cardenas Conejo</div>
       <div class="authorMeta">Learn Python. Decode Biology. · Open educational resource for biology and bioinformatics training.</div>
     </div>
-    <div class="authorMeta"><strong>v1.0.4</strong> · Python · Terminal · FASTA · Biopython · MIT License</div>
+    <div class="authorMeta"><strong>v1.0.5</strong> · Python · Terminal · FASTA · Biopython · MIT License</div>
   </div>
 </div>
-<div class="footer">BioCode Lab v1.0.4 · Python + Terminal + Bioinformatics · Single-file interactive learning environment</div>
+<div class="footer">BioCode Lab v1.0.5 · Python + Terminal + Bioinformatics · Single-file interactive learning environment</div>
 </main>
 
 <input id="importFile" type="file" accept=".biocode,application/json" class="hidden">
@@ -1647,11 +1647,11 @@ Object.assign(I.en,{
  surveyTitle:"BioCode Lab survey",
  surveyIntro:"Your answers are sent to the teacher's form and are not saved in this browser or in your .biocode file.",
  surveyEducation:"Nivel de estudios / Education level",
- surveyCountry:"Pais / Country",
+ surveyCountry:"País / Country",
  surveyLearn:"Nivel de aprendizaje / Learning level",
  surveyDifficulty:"Dificultad / Difficulty",
- surveyTedious:"Tedioso / Tedious",
- surveyRecommend:"Recomendarias BioCode Lab / Would you recommend BioCode Lab",
+ surveyTedious:"¿Qué tan tedioso fue? / How tedious was it?",
+ surveyRecommend:"¿Recomendarías BioCode Lab? / Would you recommend BioCode Lab?",
  surveyComment:"Comentario opcional / Optional comment",
  surveySubmit:"Send survey",
  surveySent:"Survey sent. Thank you.",
@@ -1718,17 +1718,17 @@ Object.assign(I.en,{
 Object.assign(I.es,{
  surveyBtn:"Encuesta",
  surveyTitle:"Encuesta BioCode Lab",
- surveyIntro:"Tus respuestas se envian al formulario del profesor y no se guardan en este navegador ni en tu archivo .biocode.",
+ surveyIntro:"Tus respuestas se envían al formulario del profesor y no se guardan en este navegador ni en tu archivo .biocode.",
  surveyEducation:"Nivel de estudios / Education level",
- surveyCountry:"Pais / Country",
+ surveyCountry:"País / Country",
  surveyLearn:"Nivel de aprendizaje / Learning level",
  surveyDifficulty:"Dificultad / Difficulty",
- surveyTedious:"Tedioso / Tedious",
- surveyRecommend:"Recomendarias BioCode Lab / Would you recommend BioCode Lab",
+ surveyTedious:"¿Qué tan tedioso fue? / How tedious was it?",
+ surveyRecommend:"¿Recomendarías BioCode Lab? / Would you recommend BioCode Lab?",
  surveyComment:"Comentario opcional / Optional comment",
  surveySubmit:"Enviar encuesta",
  surveySent:"Encuesta enviada. Gracias.",
- surveyFail:"No se pudo enviar la encuesta. Revisa tu conexion a internet e intenta de nuevo.",
+ surveyFail:"No se pudo enviar la encuesta. Revisa tu conexión a internet e intenta de nuevo.",
  surveyCancel:"Cerrar",
  surveyLow:"0 = nada / muy bajo",
  surveyHigh:"5 = mucho / muy alto",
@@ -3541,13 +3541,13 @@ function missionAttempts(m){return m.ch.reduce((n,c)=>n+(S.ch[c.id]?.attempts||0
 function missionHints(m){return m.ch.reduce((n,c)=>n+(S.ch[c.id]?.hints||0),0)}
 function renderLab(){let r=document.getElementById("labLog"),done=MISSIONS.filter(m=>S.done.includes(m.id));if(!done.length){r.innerHTML=`<div class="card labCase"><div class="li">🧪</div><h3>${lang==="en"?"No cases completed yet":"Aún no hay casos completados"}</h3><p>${lang==="en"?"Finish your first Boss Challenge to start the Lab Log.":"Completa tu primer Reto Jefe para iniciar la bitácora."}</p></div>`;return}r.innerHTML=done.map(m=>{let sec=Math.round((S.times[m.id]?.seconds||0)/60);return `<div class="card labCase done"><div class="li">${m.icon}</div><h3>${esc(m.title[idxLang()])}</h3><p>${esc(m.summary[idxLang()])}</p><div class="labMeta">✓ ${tr("complete")} · ${missionAttempts(m)} ${tr("attempts")} · ${missionHints(m)} ${tr("hints")}${missionSolutions(m)?` · ${missionSolutions(m)} ${tr("solUsed")}`:""} · ${sec} ${tr("minutes")}</div></div>`}).join("")}
 
-function exportProgress(){let data={format:"BioCode Lab",version:"1.0.4",mode:S.mode,exported:new Date().toISOString(),state:S},blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a"),prefix="";a.href=URL.createObjectURL(blob);a.download=prefix+(S.alias||"student")+".biocode";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+function exportProgress(){let data={format:"BioCode Lab",version:"1.0.5",mode:S.mode,exported:new Date().toISOString(),state:S},blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a"),prefix="";a.href=URL.createObjectURL(blob);a.download=prefix+(S.alias||"student")+".biocode";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
 function baseState(){return{alias:"",xp:0,runs:0,unlocked:1,done:[],badges:[],ch:{},boss:{},mode:"individual",classCode:"",variants:{},times:{}}}
 function importedUnlockedFromDone(s){let u=1;for(let i=0;i<MISSIONS.length;i++){if(s.done.includes(MISSIONS[i].id))u=Math.min(MISSIONS.length,i+2);else break}return u}
 function extractBiocodeState(d){if(d&&typeof d==="object"&&d.state&&typeof d.state==="object")return d.state;if(d&&typeof d==="object"&&(Array.isArray(d.done)||d.ch||d.boss||d.xp!==undefined))return d;return null}
 function normalizeImportedState(raw){let s={...baseState(),...raw};s.alias=String(s.alias||"");s.xp=Number(s.xp)||0;s.runs=Number(s.runs)||0;s.done=Array.isArray(s.done)?s.done.filter(x=>typeof x==="string"):[];s.badges=Array.isArray(s.badges)?s.badges.filter(x=>typeof x==="string"):[];s.ch=s.ch&&typeof s.ch==="object"&&!Array.isArray(s.ch)?s.ch:{};s.boss=s.boss&&typeof s.boss==="object"&&!Array.isArray(s.boss)?s.boss:{};s.variants=s.variants&&typeof s.variants==="object"&&!Array.isArray(s.variants)?s.variants:{};s.times=s.times&&typeof s.times==="object"&&!Array.isArray(s.times)?s.times:{};s.term=s.term&&typeof s.term==="object"&&!Array.isArray(s.term)?s.term:{};s.warmups=s.warmups&&typeof s.warmups==="object"&&!Array.isArray(s.warmups)?s.warmups:{};s.cvars=s.cvars&&typeof s.cvars==="object"&&!Array.isArray(s.cvars)?s.cvars:{};s.classCode=String(s.classCode||"");s.avatar=String(s.avatar||"🧪");s.mode=s.mode==="classroom"?"classroom":"individual";s.pathMode=s.pathMode==="free"?"free":"story";s.shell=s.shell==="powershell"?"powershell":"linux";s.sound=s.sound===true;s.uploadedFasta=s.uploadedFasta&&typeof s.uploadedFasta==="object"?s.uploadedFasta:null;s.unlocked=importedUnlockedFromDone(s);return s}
 function refreshAfterImport(){save();if(typeof pathModeUI==="function")pathModeUI();profile();renderMap();renderBadges();renderLab();shareUpdate();if(typeof refreshIdentity==="function")refreshIdentity();if(typeof irAVista==="function")irAVista("map");setTimeout(()=>location.reload(),450)}
-function importProgress(file){let rd=new FileReader();rd.onload=()=>{try{let d=JSON.parse(rd.result),raw=extractBiocodeState(d);if(!raw)throw new Error("invalid biocode");let next=normalizeImportedState(raw),ajeno=next.alias||"";if(!confirm(tr("importWarn").replace("{alias}",ajeno||"—")))return;S=next;refreshAfterImport();toast(lang==="en"?"Progress imported.":"Progreso importado.")}catch(e){alert(lang==="en"?"Invalid .biocode file":"Archivo .biocode invalido")}};rd.readAsText(file)}
+function importProgress(file){let rd=new FileReader();rd.onload=()=>{try{let d=JSON.parse(rd.result),raw=extractBiocodeState(d);if(!raw)throw new Error("invalid biocode");let next=normalizeImportedState(raw),ajeno=next.alias||"";if(!confirm(tr("importWarn").replace("{alias}",ajeno||"—")))return;S=next;refreshAfterImport();toast(lang==="en"?"Progress imported.":"Progreso importado.")}catch(e){alert(lang==="en"?"Invalid .biocode file":"Archivo .biocode inválido")}};rd.readAsText(file)}
 function openImportProgress(){let input=document.getElementById("importFile");if(!input)return;input.value="";input.click()}
 function importButton(id,classes="btn"){let b=document.createElement("button");b.type="button";b.className=classes;b.id=id;b.dataset.i18n="importBio";b.textContent=tr("importBio");b.onclick=openImportProgress;return b}
 function installImportButton(){let exportBtn=document.getElementById("export");if(exportBtn&&!document.getElementById("importBtn"))exportBtn.insertAdjacentElement("afterend",importButton("importBtn"))}
@@ -3556,7 +3556,7 @@ const SURVEY_ENTRY={education:"entry.197325019",country:"entry.1291159451",learn
 const SURVEY_EDU=["Bachillerato/High school","Licenciatura/Undergraduate","Posgrado/Graduate studies","Otro/Other"];
 function surveyScale(name){return `<div class="surveyScale">${[0,1,2,3,4,5].map(n=>`<label><input type="radio" name="${name}" value="${n}" required> ${n}</label>`).join("")}</div><div class="surveyEnds"><span>${tr("surveyLow")}</span><span>${tr("surveyHigh")}</span></div>`}
 function openSurvey(){let old=document.getElementById("surveyModal");if(old)old.remove();let modal=document.createElement("div");modal.id="surveyModal";modal.className="modal";modal.innerHTML=`<div class="modalCard"><div class="modalHead"><div><h2>${tr("surveyTitle")}</h2><p>${tr("surveyIntro")}</p></div><button class="btn" id="surveyClose">${tr("surveyCancel")}</button></div><form id="surveyForm" class="surveyGrid" method="POST" action="${SURVEY_FORM_ACTION}" target="surveyFrame"><input type="hidden" name="fvv" value="1"><input type="hidden" name="pageHistory" value="0"><div class="surveyField"><div class="surveyLabel">${tr("surveyEducation")}</div><div class="surveyChoices">${SURVEY_EDU.map(x=>`<label><input type="radio" name="${SURVEY_ENTRY.education}" value="${esc(x)}" required> ${esc(x)}</label>`).join("")}</div></div><div class="surveyField"><label for="surveyCountry">${tr("surveyCountry")}</label><input id="surveyCountry" type="text" name="${SURVEY_ENTRY.country}" autocomplete="country-name" required></div><div class="surveyField"><div class="surveyLabel">${tr("surveyLearn")}</div>${surveyScale(SURVEY_ENTRY.learn)}</div><div class="surveyField"><div class="surveyLabel">${tr("surveyDifficulty")}</div>${surveyScale(SURVEY_ENTRY.difficulty)}</div><div class="surveyField"><div class="surveyLabel">${tr("surveyTedious")}</div>${surveyScale(SURVEY_ENTRY.tedious)}</div><div class="surveyField"><div class="surveyLabel">${tr("surveyRecommend")}</div>${surveyScale(SURVEY_ENTRY.recommend)}</div><div class="surveyField"><label for="surveyComment">${tr("surveyComment")}</label><textarea id="surveyComment" name="${SURVEY_ENTRY.comment}"></textarea></div><div class="row" style="justify-content:flex-end"><button type="submit" class="btn primary" id="surveySubmit">${tr("surveySubmit")}</button></div><iframe name="surveyFrame" class="hidden" title="BioCode Lab survey submission"></iframe></form></div>`;document.body.appendChild(modal);document.getElementById("surveyClose").onclick=()=>modal.remove();document.getElementById("surveyForm").addEventListener("submit",()=>{let b=document.getElementById("surveySubmit");if(b){b.disabled=true;b.textContent=tr("surveySent")}setTimeout(()=>{toast(tr("surveySent"));modal.remove()},800)})}
-function installSurveyButton(){let profileBtn=document.getElementById("profileBtn");if(profileBtn&&!document.getElementById("surveyBtn")){let b=document.createElement("button");b.type="button";b.className="btn";b.id="surveyBtn";b.dataset.i18n="surveyBtn";b.textContent=tr("surveyBtn");b.onclick=openSurvey;profileBtn.insertAdjacentElement("afterend",b)}}
+function installSurveyButton(){let profileBtn=document.getElementById("profileBtn");if(profileBtn&&!document.getElementById("surveyBtn")){let b=document.createElement("button");b.type="button";b.className="btn small surveyTopBtn";b.id="surveyBtn";b.dataset.i18n="surveyBtn";b.textContent=tr("surveyBtn");b.onclick=openSurvey;profileBtn.insertAdjacentElement("afterend",b)}}
 let teacherRecords=[];
 function parseRecord(obj,name){let s=obj.state||obj;return{alias:s.alias||name,classCode:s.classCode||obj.classCode||"NO_CLASS",xp:Number(s.xp)||0,runs:Number(s.runs)||0,done:Array.isArray(s.done)?s.done:[],ch:s.ch||{},exported:obj.exported||"",name}}
 function sumHints(r){return Object.values(r.ch).reduce((n,x)=>n+(Number(x.hints)||0),0)}
