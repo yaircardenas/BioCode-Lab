@@ -3,6 +3,7 @@ message: "If you use BioCode Lab in teaching, training, or research, please cite
 title: "BioCode Lab"
 type: software
 version: 1.0.5
+doi: 10.5281/zenodo.22310563
 date-released: 2026-09-04
 authors:
   - family-names: "Cardenas Conejo"

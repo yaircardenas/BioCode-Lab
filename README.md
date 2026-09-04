@@ -125,8 +125,13 @@ automatically at the repository URL.
 
 ## Citation
 
-Citation metadata is available in `CITATION.cff`. GitHub can use it to show a
-**Cite this repository** option, and it can be reused for a Zenodo deposit.
+If you use BioCode Lab in teaching, training, or research, please cite:
+
+**Yair Cardenas Conejo. BioCode Lab v1.0.5. Zenodo.**
+https://doi.org/10.5281/zenodo.22310563
+
+Citation metadata is also available in `CITATION.cff`, which GitHub can use to
+show a **Cite this repository** option.
 
 ## License and author
 
