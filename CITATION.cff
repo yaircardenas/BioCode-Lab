@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use BioCode Lab in teaching, training, or research, please cite this software."
+title: "BioCode Lab"
+type: software
+version: 1.0.1
+date-released: 2026-09-03
+authors:
+  - family-names: "Cardenas Conejo"
+    given-names: "Yair"
+abstract: >-
+  BioCode Lab is a bilingual, gamified, story-driven learning environment
+  for undergraduate biology students that integrates Python foundations,
+  command-line skills, FASTA file handling, sys.argv, Biopython, and
+  introductory bioinformatics workflows in a single HTML application.
+keywords:
+  - bioinformatics
+  - Python
+  - Biopython
+  - command line
+  - biology education
+  - programming education
+  - open educational resource
+license: MIT
