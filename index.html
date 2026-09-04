@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BioCode Lab v1.0.3 — Learn Python. Decode Biology.</title>
+<title>BioCode Lab v1.0.4 — Learn Python. Decode Biology.</title>
 <meta name="description" content="Gamified, story-driven Python learning for biology students.">
 <meta name="theme-color" content="#0b2622">
 <meta property="og:type" content="website">
-<meta property="og:title" content="BioCode Lab v1.0.3">
+<meta property="og:title" content="BioCode Lab v1.0.4">
 <meta property="og:description" content="Learn Python, terminal skills and bioinformatics through biological missions.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BioCode Lab v1.0.3">
+<meta name="twitter:title" content="BioCode Lab v1.0.4">
 <meta name="twitter:description" content="Learn Python, terminal skills and bioinformatics through biological missions.">
-<script defer src="https://cloud.umami.is/script.js" data-website-id="41205d7c-3ce6-4a19-a64f-33f1cd7f8530" data-domains="yaircardenas.github.io" data-do-not-track="true" data-auto-pageview="false" data-exclude-hash="true" data-tag="v1.0.3"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="41205d7c-3ce6-4a19-a64f-33f1cd7f8530" data-domains="yaircardenas.github.io" data-do-not-track="true" data-auto-pageview="false" data-exclude-hash="true" data-tag="v1.0.4"></script>
 <style>
 /* =============================================================
    BioCode Lab — sistema de diseño «Cromatograma»
@@ -888,24 +888,12 @@ body.viewMission .mapSec,
 body.viewMission .badgeSec,
 body.viewMission .labSec,
 body.viewMission .shareSec,
-body.viewMission .statsSec,
 body.viewMission .authorRibbon{ display:none }
 body.viewMission .workspace{ margin-top:20px }
 
 /* --- vista PERFIL: insignias, bitácora y compartir --- */
 body.viewProfile .mapSec,
-body.viewProfile .workspace,
-body.viewProfile .statsSec{ display:none }
-body.viewStats .welcomeSec,
-body.viewStats .heroSec,
-body.viewStats .mapSec,
-body.viewStats .workspace,
-body.viewStats .badgeSec,
-body.viewStats .labSec,
-body.viewStats .shareSec,
-body.viewStats .authorRibbon{display:none}
-body:not(.viewStats) .statsSec{display:none}
-.statsGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;margin:16px 0}.statCard{padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--bg-2)}.statCard b{display:block;font-size:1.65rem;color:var(--accent)}.statCard span{font-size:var(--fs-xs);color:var(--muted)}.statsChart{padding:16px;border:1px solid var(--line);border-radius:14px;margin:12px 0}.statBar{display:grid;grid-template-columns:120px 1fr 42px;gap:10px;align-items:center;margin:10px 0;font-size:var(--fs-xs)}.statBar i{height:10px;border-radius:99px;background:var(--accent);display:block}.statsSurvey{margin-top:18px}.statsSurvey label{display:block;margin-top:12px;font-weight:700;font-size:var(--fs-xs)}.surveyChoices{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}.surveyChoices label{font-weight:500;margin:0}.statsSurvey select,.statsSurvey textarea{width:100%;margin-top:6px;padding:9px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}.smallText{font-size:var(--fs-2xs)}
+body.viewProfile .workspace{ display:none }
 
 /* --- vista MAPA (por defecto): el perfil no estorba --- */
 body:not(.viewProfile) .badgeSec,
@@ -994,7 +982,7 @@ body:not(.viewProfile) .shareSec{ display:none }
 /* En el teléfono la barra superior se amontonaba en tres filas. El botón
    del mapa sobra ahí: ese trabajo lo hace ya la barra inferior. */
 @media(max-width:760px){
-  #homeBtn,#profileBtn,#statsBtn{ display:none }
+  #homeBtn,#profileBtn{ display:none }
   .topin{ padding:9px 14px; gap:10px }
   .brand b{ font-size:var(--fs-s); line-height:1.15 }
   .brand small{ display:none }
@@ -1554,7 +1542,7 @@ body.viewHome .authorRibbon{ display:none }
    <div class="wAuthorLabel" data-i18n="wMadeBy">Created by</div>
    <div class="wAuthorName">Yair Cárdenas Conejo</div>
    <p class="wAuthorText" data-i18n="wAuthorText">Built as an open educational resource so that biology students can learn to program with the data they actually care about. Free to use, copy and adapt in any classroom.</p>
-   <div class="wBadges"><span class="wChip">v1.0.3</span><span class="wChip">MIT License</span><span class="wChip">Python 3</span><span class="wChip">Biopython</span><span class="wChip" data-i18n="wOpenSource">Open source</span></div>
+   <div class="wBadges"><span class="wChip">v1.0.4</span><span class="wChip">MIT License</span><span class="wChip">Python 3</span><span class="wChip">Biopython</span><span class="wChip" data-i18n="wOpenSource">Open source</span></div>
   </div>
  </div>
 
@@ -1581,7 +1569,6 @@ body.viewHome .authorRibbon{ display:none }
 <section class="workspace hidden" id="workspace"></section>
 
 <section class="sect badgeSec"><div class="sectHead"><div><h2 data-i18n="achieve">Achievement lab</h2><p data-i18n="achieveText">Badges recognize real coding milestones.</p></div></div><div class="badges" id="badges"></div></section>
-<section class="sect statsSec" id="statsSec"><div class="sectHead"><div><h2 data-i18n="stats_title">Learning statistics</h2><p data-i18n="stats_intro">See your local progress. Anonymous visits and learning milestones help evaluate BioCode Lab.</p></div></div><div id="statsDashboard"></div><div class="statsSurvey card"><h3 data-i18n="stats_survey_title">Was BioCode Lab useful?</h3><p class="muted" data-i18n="stats_survey_intro">This short survey is optional. Structured answers are sent anonymously; your free-text comment stays on this device.</p><label data-i18n="stats_helpful">How useful was it?</label><div class="surveyChoices"><label><input type="radio" name="statsHelpful" value="yes"> <span data-i18n="stats_yes">Yes, very useful</span></label><label><input type="radio" name="statsHelpful" value="somewhat"> <span data-i18n="stats_somewhat">Somewhat useful</span></label><label><input type="radio" name="statsHelpful" value="no"> <span data-i18n="stats_no">Not yet</span></label></div><label for="statsConfidence" data-i18n="stats_confidence">How confident do you feel now?</label><select id="statsConfidence"><option value="">—</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><label for="statsFavorite" data-i18n="stats_favorite">Which part did you enjoy most?</label><select id="statsFavorite"><option value="">—</option><option value="python" data-i18n="stats_python">Python missions</option><option value="terminal" data-i18n="stats_terminal">Terminal laboratory</option><option value="biology" data-i18n="stats_biology">Biology challenges</option></select><label for="statsComment" data-i18n="stats_comment">Optional comment (stays on this device)</label><textarea id="statsComment" rows="3" data-i18n-placeholder="stats_comment_ph" placeholder="What should we improve?"></textarea><div class="row"><button class="btn primary" id="statsSave" data-i18n="stats_save">Submit anonymous survey</button><button class="btn" id="statsExport" data-i18n="stats_export">Export anonymous report</button></div><p class="muted smallText" data-i18n="stats_export_intro">The downloaded file contains local totals and survey answers. It does not include your alias, code, sequences or class code.</p><p class="muted smallText" data-i18n="stats_privacy">Privacy: Umami receives anonymous technical data and learning milestones. Your alias, code, commands, sequences, class code and free-text comment are never sent.</p></div></section>
 <section class="sect labSec"><div class="sectHead"><div><h2 data-i18n="labLog">Lab Log</h2><p data-i18n="labText">Your solved biological case files and coding milestones.</p></div></div><div class="labGrid" id="labLog"></div></section>
 
 <section class="sect shareSec"><div class="sectHead"><div><h2 data-i18n="shareTitle">Share your progress</h2><p data-i18n="shareText">On phones, use the native share menu. On computers, send the card to your phone by QR or download it.</p></div></div>
@@ -1596,10 +1583,10 @@ body.viewHome .authorRibbon{ display:none }
       <div class="authorMain">BioCode Lab by Yair Cardenas Conejo</div>
       <div class="authorMeta">Learn Python. Decode Biology. · Open educational resource for biology and bioinformatics training.</div>
     </div>
-    <div class="authorMeta"><strong>v1.0.3</strong> · Python · Terminal · FASTA · Biopython · MIT License</div>
+    <div class="authorMeta"><strong>v1.0.4</strong> · Python · Terminal · FASTA · Biopython · MIT License</div>
   </div>
 </div>
-<div class="footer">BioCode Lab v1.0.3 · Python + Terminal + Bioinformatics · Single-file interactive learning environment</div>
+<div class="footer">BioCode Lab v1.0.4 · Python + Terminal + Bioinformatics · Single-file interactive learning environment</div>
 </main>
 
 <input id="importFile" type="file" accept=".biocode,application/json" class="hidden">
@@ -1688,38 +1675,6 @@ Object.assign(I.en,{
  tab_map:"Map",
  tab_mission:"Mission",
  tab_profile:"Profile",
- tab_stats:"Statistics",
- stats_title:"Learning statistics",
- stats_intro:"See your local progress. Anonymous visits and learning milestones help evaluate BioCode Lab.",
- stats_overview:"Overview",
- stats_sessions:"Sessions",
- stats_missions_started:"Missions opened",
- stats_missions_done:"Missions completed",
- stats_challenges_done:"Challenges completed",
- stats_python_runs:"Python runs",
- stats_terminal_runs:"Terminal commands",
- stats_time:"Practice time",
- stats_progress:"Progress by part",
- stats_survey_title:"Was BioCode Lab useful?",
- stats_survey_intro:"This short survey is optional. Structured answers are sent anonymously; your free-text comment stays on this device.",
- stats_helpful:"How useful was it?",
- stats_yes:"Yes, very useful",
- stats_somewhat:"Somewhat useful",
- stats_no:"Not yet",
- stats_confidence:"How confident do you feel now?",
- stats_favorite:"Which part did you enjoy most?",
- stats_python:"Python missions",
- stats_terminal:"Terminal laboratory",
- stats_biology:"Biology challenges",
- stats_comment:"Optional comment (stays on this device)",
- stats_comment_ph:"What should we improve?",
- stats_save:"Submit anonymous survey",
- stats_saved:"Survey saved and anonymous answers sent. Thank you!",
- stats_saved_local:"Survey saved on this device. Anonymous measurement may be blocked by your browser.",
- stats_answer_one:"Choose at least one answer before submitting.",
- stats_export:"Export anonymous report",
- stats_export_intro:"The downloaded file contains local totals and survey answers. It does not include your alias, code, sequences or class code.",
- stats_privacy:"Privacy: Umami receives anonymous technical data and learning milestones. Your alias, code, commands, sequences, class code and free-text comment are never sent.",
  expected:"Expected output",
  toggleColor:"Toggle syntax colours",
  colorOn:"Syntax colours on",
@@ -1777,38 +1732,6 @@ Object.assign(I.es,{
  tab_map:"Mapa",
  tab_mission:"Misión",
  tab_profile:"Perfil",
- tab_stats:"Estadísticas",
- stats_title:"Estadísticas de aprendizaje",
- stats_intro:"Consulta tu progreso local. Las visitas y avances anónimos ayudan a evaluar BioCode Lab.",
- stats_overview:"Resumen",
- stats_sessions:"Sesiones",
- stats_missions_started:"Misiones abiertas",
- stats_missions_done:"Misiones completadas",
- stats_challenges_done:"Retos completados",
- stats_python_runs:"Ejecuciones de Python",
- stats_terminal_runs:"Comandos de terminal",
- stats_time:"Tiempo de práctica",
- stats_progress:"Progreso por parte",
- stats_survey_title:"¿Te sirvió BioCode Lab?",
- stats_survey_intro:"Esta encuesta es opcional. Las respuestas estructuradas se envían de forma anónima; tu comentario libre permanece en este dispositivo.",
- stats_helpful:"¿Qué tan útil fue?",
- stats_yes:"Sí, mucho",
- stats_somewhat:"Algo útil",
- stats_no:"Todavía no",
- stats_confidence:"¿Qué tanta confianza tienes ahora?",
- stats_favorite:"¿Qué parte disfrutaste más?",
- stats_python:"Misiones de Python",
- stats_terminal:"Laboratorio de terminal",
- stats_biology:"Retos de biología",
- stats_comment:"Comentario opcional (permanece en este dispositivo)",
- stats_comment_ph:"¿Qué deberíamos mejorar?",
- stats_save:"Enviar encuesta anónima",
- stats_saved:"Encuesta guardada y respuestas anónimas enviadas. ¡Gracias!",
- stats_saved_local:"Encuesta guardada en este dispositivo. Tu navegador puede estar bloqueando la medición anónima.",
- stats_answer_one:"Elige al menos una respuesta antes de enviarla.",
- stats_export:"Exportar reporte anónimo",
- stats_export_intro:"El archivo descargado contiene totales locales y respuestas de la encuesta. No incluye tu alias, código, secuencias ni código de clase.",
- stats_privacy:"Privacidad: Umami recibe datos técnicos y avances de aprendizaje anónimos. Nunca se envían tu alias, código, comandos, secuencias, código de clase ni comentario libre.",
  expected:"Salida esperada",
  toggleColor:"Activar o desactivar colores",
  colorOn:"Colores activados",
@@ -6088,7 +6011,7 @@ report=function(){
 
 /* "home" es la Bienvenida: lo primero que ve alguien que no sabe que es
    esto. Va primero en la barra porque es donde empieza la historia. */
-const VISTAS = ["home", "map", "mission", "profile", "stats"];
+const VISTAS = ["home", "map", "mission", "profile"];
 
 /* Cuando el cambio de vista viene del historial no hay que volver a
    empujar una entrada, o el botón atrás dejaría de avanzar. */
@@ -6097,7 +6020,6 @@ let navDesdeHistorial = false;
 function vistaActual() {
   if (document.body.classList.contains("viewMission")) return "mission";
   if (document.body.classList.contains("viewProfile")) return "profile";
-  if (document.body.classList.contains("viewStats")) return "stats";
   if (document.body.classList.contains("viewHome")) return "home";
   return "map";
 }
@@ -6105,7 +6027,6 @@ function vistaActual() {
 function pintarVista(v) {
   document.body.classList.toggle("viewMission", v === "mission");
   document.body.classList.toggle("viewProfile", v === "profile");
-  document.body.classList.toggle("viewStats", v === "stats");
   document.body.classList.toggle("viewHome", v === "home");
   document.querySelectorAll("[data-view]").forEach(b =>
     b.classList.toggle("on", b.dataset.view === v));
@@ -6117,7 +6038,6 @@ function navEmpujar(v, mid) {
   if (navDesdeHistorial) return;
   const hash = v === "mission" && mid ? "#m/" + mid
              : v === "profile" ? "#perfil"
-             : v === "stats" ? "#estadisticas"
              : v === "home" ? "#inicio" : "#mapa";
   try {
     if (location.hash !== hash) history.pushState({ v, mid }, "", hash);
@@ -6180,7 +6100,7 @@ addEventListener("popstate", e => navAplicar(e.state));
   nav.id = "tabBar";
   nav.innerHTML = VISTAS.map(v =>
     `<button data-view="${v}">
-       <span class="tabIcon" aria-hidden="true">${{ home: "🏠", map: "🗺", mission: "🧪", profile: "👤", stats: "📊" }[v]}</span>
+       <span class="tabIcon" aria-hidden="true">${{ home: "🏠", map: "🗺", mission: "🧪", profile: "👤" }[v]}</span>
        <span data-i18n="tab_${v}">${esc(tr("tab_" + v))}</span>
      </button>`).join("");
   document.body.appendChild(nav);
@@ -6199,7 +6119,7 @@ addEventListener("popstate", e => navAplicar(e.state));
      importarle. Quien ya empezo vuelve al mapa, que es lo que espera. */
   const primeraVez = !S.done.length && !S.lastMid && !S.xp;
   const v = location.hash === "#perfil" ? "profile"
-          : location.hash === "#estadisticas" ? "stats"
+          : location.hash === "#estadisticas" ? "map"
           : location.hash === "#inicio" ? "home"
           : location.hash === "#mapa" ? "map"
           : (primeraVez ? "home" : "map");
@@ -6236,7 +6156,6 @@ setLang = function (l) {
   pathModeUI();
   pintarVista(vistaActual());
   document.querySelectorAll("[data-i18n-placeholder]").forEach(e=>e.placeholder=tr(e.dataset.i18nPlaceholder));
-  if(window.__renderStats) window.__renderStats();
 };
 
 
@@ -6253,8 +6172,6 @@ setLang = function (l) {
   if (h) h.onclick = () => irAVista("map");
   const pf = document.getElementById("profileBtn");
   if (pf) pf.onclick = () => irAVista("profile");
-  const st = document.getElementById("statsBtn");
-  if (st) st.onclick = () => irAVista("stats");
 })();
 
 /* =============================================================
@@ -6541,11 +6458,8 @@ openMission=function(mid,target){safetyOpenMission(mid,target);if(mid!=="m6")ret
   const previousCheck=checkTermChallenge;
   checkTermChallenge=function(mid,cid){previousCheck(mid,cid);setTimeout(()=>mountNow(mid),0)};
 })();
-/* ===== Estadísticas locales y encuesta anónima ===== */
-(function statsFeature(){
-  S.stats=S.stats||{}; const st=S.stats;
-  st.sessions=Number(st.sessions||0); st.missionsOpened=st.missionsOpened||{}; st.pythonRuns=Number(st.pythonRuns||0); st.terminalRuns=Number(st.terminalRuns||0); st.survey=st.survey||{};
-  try{if(!sessionStorage.getItem("biocode_session_seen")){st.sessions++;sessionStorage.setItem("biocode_session_seen","1");save()}}catch(e){}
+/* ===== Privacy-first anonymous usage analytics ===== */
+(function anonymousAnalytics(){
   const openedThisSession=new Set();
   function absorbAnalytics(result){
     if(result&&typeof result.catch==="function")result.catch(e=>console.warn("[BioCode analytics]",e));
@@ -6574,44 +6488,9 @@ openMission=function(mid,target){safetyOpenMission(mid,target);if(mid!=="m6")ret
     const mission=MISSIONS.find(x=>x.id===mid);
     return {mission:mid||"unknown",part:number<=9?"python":number<=12?"terminal":"bioinformatics",engine:mission?.engine||"python",language:lang};
   }
-  const topRow=document.querySelector(".topin .row");
-  if(topRow&&!document.getElementById("statsBtn")){const b=document.createElement("button");b.className="btn small";b.id="statsBtn";b.dataset.i18n="tab_stats";b.textContent=tr("tab_stats");topRow.insertBefore(b,document.getElementById("soundBtn"));b.onclick=()=>irAVista("stats")}
-  const escNum=n=>Math.max(0,Number(n)||0);
-  function renderStats(){
-    const box=document.getElementById("statsDashboard"); if(!box)return;
-    const total=MISSIONS.length, done=S.done.length, challenges=Object.values(S.ch||{}).filter(x=>x&&x.done).length;
-    const mins=Math.round(Object.values(S.times||{}).reduce((a,t)=>a+escNum(t&&t.seconds),0)/60);
-    const cards=[["stats_sessions",st.sessions],["stats_missions_started",Object.keys(st.missionsOpened).length],["stats_missions_done",done+" / "+total],["stats_challenges_done",challenges],["stats_python_runs",st.pythonRuns],["stats_terminal_runs",st.terminalRuns],["stats_time",mins+" min"]];
-    const parts=[["Part I",MISSIONS.filter(m=>Number(m.id.slice(1))<=9).filter(m=>S.done.includes(m.id)).length,9],["Part II",MISSIONS.filter(m=>Number(m.id.slice(1))>=10&&Number(m.id.slice(1))<=12).filter(m=>S.done.includes(m.id)).length,3],["Part III",MISSIONS.filter(m=>Number(m.id.slice(1))>=13).filter(m=>S.done.includes(m.id)).length,5]];
-    box.innerHTML='<h3>'+tr("stats_overview")+'</h3><div class="statsGrid">'+cards.map(x=>'<div class="statCard"><b>'+esc(x[1])+'</b><span>'+tr(x[0])+'</span></div>').join("")+'</div><div class="statsChart"><h3>'+tr("stats_progress")+'</h3>'+parts.map(p=>'<div class="statBar"><span>'+p[0]+'</span><div style="background:var(--bg);border-radius:99px;overflow:hidden"><i style="width:'+(p[2]?Math.round(p[1]/p[2]*100):0)+'%"></i></div><strong>'+p[1]+"/"+p[2]+'</strong></div>').join("")+'</div>';
-    const q=st.survey; document.querySelectorAll('input[name="statsHelpful"]').forEach(i=>i.checked=i.value===q.helpful); const c=document.getElementById("statsConfidence"),f=document.getElementById("statsFavorite"),comment=document.getElementById("statsComment"); if(c)c.value=q.confidence||"";if(f)f.value=q.favorite||"";if(comment)comment.value=q.comment||"";
-  }
-  const safeRender=()=>{try{renderStats()}catch(e){console.warn("[BioCode stats]",e)}};
-  function saveSurvey(){
-    const h=document.querySelector('input[name="statsHelpful"]:checked');
-    const confidence=document.getElementById("statsConfidence")?.value||"";
-    const favorite=document.getElementById("statsFavorite")?.value||"";
-    const comment=(document.getElementById("statsComment")?.value||"").trim();
-    if(!h&&!confidence&&!favorite){toast(tr("stats_answer_one"));return}
-    st.survey={helpful:h?h.value:"",confidence,favorite,comment,updatedAt:new Date().toISOString()};
-    save();
-    const sent=analytics("survey_submitted",{
-      helpful:h?h.value:"unanswered",
-      confidence:confidence||"unanswered",
-      favorite:favorite||"unanswered",
-      language:lang,
-      learning_path:S.pathMode||"story",
-      missions_completed:S.done.length,
-      challenges_completed:Object.values(S.ch||{}).filter(x=>x&&x.done).length
-    });
-    toast(tr(sent?"stats_saved":"stats_saved_local"));
-    renderStats();
-  }
-  function exportStats(){const payload={format:"BioCode Lab anonymous usage report",version:"1.0.3",exportedAt:new Date().toISOString(),stats:{sessions:st.sessions,missionsOpened:Object.keys(st.missionsOpened).length,missionsCompleted:S.done.length,challengesCompleted:Object.values(S.ch||{}).filter(x=>x&&x.done).length,pythonRuns:st.pythonRuns,terminalRuns:st.terminalRuns,practiceMinutes:Math.round(Object.values(S.times||{}).reduce((a,t)=>a+escNum(t&&t.seconds),0)/60)},survey:st.survey};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="biocode-anonymous-report-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
   const oldOpen=openMission; openMission=function(mid,target=null){
     const r=oldOpen(mid,target);
     if(document.getElementById("workspace")?.dataset.mid===mid){
-      st.missionsOpened[mid]=true;save();safeRender();
       if(!openedThisSession.has(mid)){openedThisSession.add(mid);analytics("mission_opened",missionData(mid))}
     }
     return r;
@@ -6619,19 +6498,17 @@ openMission=function(mid,target){safetyOpenMission(mid,target);if(mid!=="m6")ret
   if(typeof execute==="function"){
     const oldExecute=execute;
     execute=async function(...args){
-      st.pythonRuns++;
       analytics("python_run",{mission:S.lastMid||"unknown",language:lang});
-      try{return await oldExecute(...args)}finally{save();safeRender()}
+      return oldExecute(...args);
     };
   }
   if(typeof terminalCommand==="function"){
     const oldTerminal=terminalCommand;
     terminalCommand=function(mid,cmd,...rest){
       if(String(cmd||"").trim()){
-        st.terminalRuns++;
         analytics("terminal_command_run",{mission:mid||"unknown",shell:S.shell||"linux",language:lang});
       }
-      const r=oldTerminal(mid,cmd,...rest);save();safeRender();return r;
+      return oldTerminal(mid,cmd,...rest);
     };
   }
   if(typeof runChallenge==="function"){
@@ -6666,8 +6543,6 @@ openMission=function(mid,target){safetyOpenMission(mid,target);if(mid!=="m6")ret
   for(const id of ["wStartBtn","wStartBtn2"]){document.getElementById(id)?.addEventListener("click",()=>analytics("course_started",{language:lang,learning_path:S.pathMode||"story"}))}
   document.getElementById("storyPathBtn")?.addEventListener("click",()=>analytics("learning_path_selected",{learning_path:"story",language:lang}));
   document.getElementById("freePathBtn")?.addEventListener("click",()=>analytics("learning_path_selected",{learning_path:"free",language:lang}));
-  document.getElementById("statsSave")?.addEventListener("click",saveSurvey);document.getElementById("statsExport")?.addEventListener("click",exportStats);
-  window.__renderStats=safeRender; document.querySelectorAll("[data-i18n-placeholder]").forEach(e=>e.placeholder=tr(e.dataset.i18nPlaceholder)); safeRender();
 })();
 </script>
 
