@@ -1,4 +1,4 @@
-# BioCode Lab v1.0.2
+# BioCode Lab v1.0.3
 
 **Learn Python. Decode Biology.**
 
@@ -122,4 +122,4 @@ BioCode Lab is distributed under the **MIT License**.
 
 **Yair Cardenas Conejo**
 
-BioCode Lab v1.0.2 — 2026-09-04
+BioCode Lab v1.0.3 — 2026-09-04

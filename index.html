@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BioCode Lab v1.0.2 — Learn Python. Decode Biology.</title>
+<title>BioCode Lab v1.0.3 — Learn Python. Decode Biology.</title>
 <meta name="description" content="Gamified, story-driven Python learning for biology students.">
 <meta name="theme-color" content="#0b2622">
 <meta property="og:type" content="website">
-<meta property="og:title" content="BioCode Lab v1.0.2">
+<meta property="og:title" content="BioCode Lab v1.0.3">
 <meta property="og:description" content="Learn Python, terminal skills and bioinformatics through biological missions.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BioCode Lab v1.0.2">
+<meta name="twitter:title" content="BioCode Lab v1.0.3">
 <meta name="twitter:description" content="Learn Python, terminal skills and bioinformatics through biological missions.">
-<script defer src="https://cloud.umami.is/script.js" data-website-id="41205d7c-3ce6-4a19-a64f-33f1cd7f8530" data-domains="yaircardenas.github.io" data-do-not-track="true" data-tag="v1.0.2"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="41205d7c-3ce6-4a19-a64f-33f1cd7f8530" data-domains="yaircardenas.github.io" data-do-not-track="true" data-auto-pageview="false" data-exclude-hash="true" data-tag="v1.0.3"></script>
 <style>
 /* =============================================================
    BioCode Lab — sistema de diseño «Cromatograma»
@@ -1554,7 +1554,7 @@ body.viewHome .authorRibbon{ display:none }
    <div class="wAuthorLabel" data-i18n="wMadeBy">Created by</div>
    <div class="wAuthorName">Yair Cárdenas Conejo</div>
    <p class="wAuthorText" data-i18n="wAuthorText">Built as an open educational resource so that biology students can learn to program with the data they actually care about. Free to use, copy and adapt in any classroom.</p>
-   <div class="wBadges"><span class="wChip">v1.0.2</span><span class="wChip">MIT License</span><span class="wChip">Python 3</span><span class="wChip">Biopython</span><span class="wChip" data-i18n="wOpenSource">Open source</span></div>
+   <div class="wBadges"><span class="wChip">v1.0.3</span><span class="wChip">MIT License</span><span class="wChip">Python 3</span><span class="wChip">Biopython</span><span class="wChip" data-i18n="wOpenSource">Open source</span></div>
   </div>
  </div>
 
@@ -1596,10 +1596,10 @@ body.viewHome .authorRibbon{ display:none }
       <div class="authorMain">BioCode Lab by Yair Cardenas Conejo</div>
       <div class="authorMeta">Learn Python. Decode Biology. · Open educational resource for biology and bioinformatics training.</div>
     </div>
-    <div class="authorMeta"><strong>v1.0.2</strong> · Python · Terminal · FASTA · Biopython · MIT License</div>
+    <div class="authorMeta"><strong>v1.0.3</strong> · Python · Terminal · FASTA · Biopython · MIT License</div>
   </div>
 </div>
-<div class="footer">BioCode Lab v1.0.2 · Python + Terminal + Bioinformatics · Single-file interactive learning environment</div>
+<div class="footer">BioCode Lab v1.0.3 · Python + Terminal + Bioinformatics · Single-file interactive learning environment</div>
 </main>
 
 <input id="importFile" type="file" accept=".biocode,application/json" class="hidden">
@@ -3586,7 +3586,7 @@ function missionAttempts(m){return m.ch.reduce((n,c)=>n+(S.ch[c.id]?.attempts||0
 function missionHints(m){return m.ch.reduce((n,c)=>n+(S.ch[c.id]?.hints||0),0)}
 function renderLab(){let r=document.getElementById("labLog"),done=MISSIONS.filter(m=>S.done.includes(m.id));if(!done.length){r.innerHTML=`<div class="card labCase"><div class="li">🧪</div><h3>${lang==="en"?"No cases completed yet":"Aún no hay casos completados"}</h3><p>${lang==="en"?"Finish your first Boss Challenge to start the Lab Log.":"Completa tu primer Reto Jefe para iniciar la bitácora."}</p></div>`;return}r.innerHTML=done.map(m=>{let sec=Math.round((S.times[m.id]?.seconds||0)/60);return `<div class="card labCase done"><div class="li">${m.icon}</div><h3>${esc(m.title[idxLang()])}</h3><p>${esc(m.summary[idxLang()])}</p><div class="labMeta">✓ ${tr("complete")} · ${missionAttempts(m)} ${tr("attempts")} · ${missionHints(m)} ${tr("hints")}${missionSolutions(m)?` · ${missionSolutions(m)} ${tr("solUsed")}`:""} · ${sec} ${tr("minutes")}</div></div>`}).join("")}
 
-function exportProgress(){let data={format:"BioCode Lab",version:"1.0.2",mode:S.mode,exported:new Date().toISOString(),state:S},blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a"),prefix="";a.href=URL.createObjectURL(blob);a.download=prefix+(S.alias||"student")+".biocode";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+function exportProgress(){let data={format:"BioCode Lab",version:"1.0.3",mode:S.mode,exported:new Date().toISOString(),state:S},blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a"),prefix="";a.href=URL.createObjectURL(blob);a.download=prefix+(S.alias||"student")+".biocode";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
 function importProgress(file){let rd=new FileReader();rd.onload=()=>{try{let d=JSON.parse(rd.result);let ajeno=(d.state||d).alias||"";if(!confirm(tr("importWarn").replace("{alias}",ajeno||"—")))return;S=d.state||d;S.variants=S.variants||{};S.times=S.times||{};save();profile();renderMap();renderBadges();renderLab();shareUpdate();toast(lang==="en"?"Progress imported.":"Progreso importado.")}catch(e){alert("Invalid .biocode file")}};rd.readAsText(file)}
 let teacherRecords=[];
 function parseRecord(obj,name){let s=obj.state||obj;return{alias:s.alias||name,classCode:s.classCode||obj.classCode||"NO_CLASS",xp:Number(s.xp)||0,runs:Number(s.runs)||0,done:Array.isArray(s.done)?s.done:[],ch:s.ch||{},exported:obj.exported||"",name}}
@@ -6547,15 +6547,28 @@ openMission=function(mid,target){safetyOpenMission(mid,target);if(mid!=="m6")ret
   st.sessions=Number(st.sessions||0); st.missionsOpened=st.missionsOpened||{}; st.pythonRuns=Number(st.pythonRuns||0); st.terminalRuns=Number(st.terminalRuns||0); st.survey=st.survey||{};
   try{if(!sessionStorage.getItem("biocode_session_seen")){st.sessions++;sessionStorage.setItem("biocode_session_seen","1");save()}}catch(e){}
   const openedThisSession=new Set();
+  function absorbAnalytics(result){
+    if(result&&typeof result.catch==="function")result.catch(e=>console.warn("[BioCode analytics]",e));
+  }
   function analytics(event,data){
     try{
       if(window.umami&&typeof window.umami.track==="function"){
-        window.umami.track(event,data||{});
+        absorbAnalytics(window.umami.track(event,data||{}));
         return true;
       }
     }catch(e){console.warn("[BioCode analytics]",e)}
     return false;
   }
+  function initialPageview(attempt=0){
+    try{
+      if(window.umami&&typeof window.umami.track==="function"){
+        absorbAnalytics(window.umami.track());
+        return;
+      }
+    }catch(e){console.warn("[BioCode analytics]",e);return}
+    if(attempt<20)setTimeout(()=>initialPageview(attempt+1),250);
+  }
+  if(document.readyState==="loading")addEventListener("DOMContentLoaded",()=>initialPageview(),{once:true});else initialPageview();
   function missionData(mid){
     const number=Number(String(mid||"").replace(/\D/g,""))||0;
     const mission=MISSIONS.find(x=>x.id===mid);
@@ -6594,7 +6607,7 @@ openMission=function(mid,target){safetyOpenMission(mid,target);if(mid!=="m6")ret
     toast(tr(sent?"stats_saved":"stats_saved_local"));
     renderStats();
   }
-  function exportStats(){const payload={format:"BioCode Lab anonymous usage report",version:"1.0.2",exportedAt:new Date().toISOString(),stats:{sessions:st.sessions,missionsOpened:Object.keys(st.missionsOpened).length,missionsCompleted:S.done.length,challengesCompleted:Object.values(S.ch||{}).filter(x=>x&&x.done).length,pythonRuns:st.pythonRuns,terminalRuns:st.terminalRuns,practiceMinutes:Math.round(Object.values(S.times||{}).reduce((a,t)=>a+escNum(t&&t.seconds),0)/60)},survey:st.survey};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="biocode-anonymous-report-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+  function exportStats(){const payload={format:"BioCode Lab anonymous usage report",version:"1.0.3",exportedAt:new Date().toISOString(),stats:{sessions:st.sessions,missionsOpened:Object.keys(st.missionsOpened).length,missionsCompleted:S.done.length,challengesCompleted:Object.values(S.ch||{}).filter(x=>x&&x.done).length,pythonRuns:st.pythonRuns,terminalRuns:st.terminalRuns,practiceMinutes:Math.round(Object.values(S.times||{}).reduce((a,t)=>a+escNum(t&&t.seconds),0)/60)},survey:st.survey};const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="biocode-anonymous-report-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
   const oldOpen=openMission; openMission=function(mid,target=null){
     const r=oldOpen(mid,target);
     if(document.getElementById("workspace")?.dataset.mid===mid){
